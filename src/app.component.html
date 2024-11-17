@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col combobox">
+      <label>Panelist 1<span>*</span></label>
+      <ejs-combobox
+        name="panelistList1"
+        [dataSource]="batchInfo.panelists"
+        [fields]="panelistsFields"
+        placeholder="Select"
+        popupHeight="250px"
+        (select)="onPanelistSelect($event, 'panelistList1')"
+        [(ngModel)]="physicalVerificationForm.panelistList1.name"
+        required
+      >
+      </ejs-combobox>
+      <br />
+      <label>Panelist 2<span>*</span></label>
+      <ejs-combobox
+        name="panelistList2"
+        [dataSource]="batchInfo.panelists"
+        [fields]="panelistsFields"
+        placeholder="Select"
+        popupHeight="250px"
+        (select)="onPanelistSelect($event, 'panelistList2')"
+        [(ngModel)]="physicalVerificationForm.panelistList2.name"
+        required
+      >
+      </ejs-combobox>
+      <br />
+      <button mat-flat-button (click)="onSubmit()">Submit</button>
+    </div>
+  </div>
+</div>
+
