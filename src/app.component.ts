@@ -42,7 +42,6 @@ export class App implements OnInit, AfterViewInit {
 
   onPanelistSelect(event: any, panelist: string) {
     console.log(event);
-    console.log(this.physicalVerificationForm);
     this.physicalVerificationForm[panelist] = event.itemData;
   }
 
